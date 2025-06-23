@@ -1,10 +1,10 @@
 import mysql from "mysql2/promise"
 
 const dbConfig = {
-  host: process.env.DB_HOST || "localhost",
-  user: process.env.DB_USER || "root",
-  password: process.env.DB_PASSWORD || "",
-  database: process.env.DB_NAME || "psychology_cabinet",
+  host: process.env.DB_HOST || "sql7.freesqldatabase.com",
+  user: process.env.DB_USER || "sql7786149",
+  password: process.env.DB_PASSWORD || "FZK4aHjQUZ",
+  database: process.env.DB_NAME || "sql7786149",
   charset: "utf8mb4",
 }
 
