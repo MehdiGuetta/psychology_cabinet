@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { useState, useEffect } from "react"
-import { usePathname } from "next/navigation"
-import { Menu, X, Phone, Mail, MapPin } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   const navItems = [
     { href: "/", label: "Accueil" },
@@ -20,20 +20,20 @@ export default function Navigation() {
     { href: "/faq", label: "FAQ" },
     { href: "/temoignages", label: "Témoignages" },
     { href: "/contact", label: "Contact" },
-  ]
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const isActive = (href: string) => {
-    if (href === "/") return pathname === "/"
-    return pathname.startsWith(href)
-  }
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
 
   return (
     <>
@@ -52,7 +52,7 @@ export default function Navigation() {
               </div>
               <div className="flex items-center">
                 <MapPin className="h-4 w-4 mr-2" />
-                <span>123 Rue de la Santé, 75014 Paris</span>
+                <span>Av. Abdelkhalek Torres, Salé</span>
               </div>
             </div>
             <div className="text-sm">
@@ -82,7 +82,9 @@ export default function Navigation() {
                   <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
                     Cabinet Psychologie
                   </h1>
-                  <p className="text-xs text-gray-500">Bien-être & Accompagnement</p>
+                  <p className="text-xs text-gray-500">
+                    Bien-être & Accompagnement
+                  </p>
                 </div>
               </Link>
             </div>
@@ -116,7 +118,11 @@ export default function Navigation() {
 
             {/* Mobile menu button */}
             <div className="lg:hidden flex items-center space-x-2">
-              <Button asChild size="sm" className="bg-gradient-to-r from-blue-600 to-blue-700">
+              <Button
+                asChild
+                size="sm"
+                className="bg-gradient-to-r from-blue-600 to-blue-700"
+              >
                 <Link href="/rendez-vous">RDV</Link>
               </Button>
               <button
@@ -124,7 +130,11 @@ export default function Navigation() {
                 className="p-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
                 aria-label="Menu"
               >
-                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {isOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
               </button>
             </div>
           </div>
@@ -165,5 +175,5 @@ export default function Navigation() {
         </div>
       </nav>
     </>
-  )
+  );
 }
