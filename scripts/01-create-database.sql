@@ -55,21 +55,3 @@
         published_date DATE NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
-
-    -- Table FAQ
-    CREATE TABLE faq (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        question TEXT NOT NULL,
-        answer TEXT NOT NULL,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    );
-
-    -- Table des témoignages
-    CREATE TABLE testimonials (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        name VARCHAR(255) NOT NULL,
-        content TEXT NOT NULL,
-        rating INT CHECK (rating >= 1 AND rating <= 5),
-        is_validated BOOLEAN DEFAULT FALSE,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    );

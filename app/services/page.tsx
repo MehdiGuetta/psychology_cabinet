@@ -196,14 +196,6 @@ export default function ServicesPage() {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="border-white/30 text-black hover:bg-white/10 hover:text-white backdrop-blur-sm"
-                >
-                  <Link href="/faq">Consulter la FAQ</Link>
-                </Button>
               </div>
             </div>
           </div>

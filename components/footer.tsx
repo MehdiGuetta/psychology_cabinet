@@ -56,8 +56,6 @@ export default function Footer() {
                 { href: "/services", label: "Services" },
                 { href: "/rendez-vous", label: "Prendre RDV" },
                 { href: "/ressources", label: "Ressources" },
-                { href: "/faq", label: "FAQ" },
-                { href: "/temoignages", label: "Témoignages" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

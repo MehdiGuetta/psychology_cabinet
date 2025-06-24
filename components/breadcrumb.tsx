@@ -26,8 +26,6 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       services: "Services",
       "rendez-vous": "Rendez-vous",
       ressources: "Ressources",
-      faq: "FAQ",
-      temoignages: "Témoignages",
       contact: "Contact",
     }
 
